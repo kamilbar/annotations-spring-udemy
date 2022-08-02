@@ -12,10 +12,13 @@ public class AnnotationDemoApp {
                 new ClassPathXmlApplicationContext("applicationContext.xml");
 
         // get beans
-        Coach theCoach = context.getBean("MySillyCoach", Coach.class);
+ //       Coach theCoach = context.getBean("MySillyCoach", Coach.class);
+        Coach theCoach = context.getBean("tennisCoach", Coach.class);
+        Coach myCoach = context.getBean("footballCoach", Coach.class);
 
         // do stuff on beans
         System.out.println(theCoach.getDailyWorkout());
+        System.out.println(myCoach.getDailyWorkout());
 
         // close the context
         context.close();
