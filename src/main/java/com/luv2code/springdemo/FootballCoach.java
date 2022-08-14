@@ -9,8 +9,18 @@ public class FootballCoach implements Coach {
 
     private FortuneService fortuneService;
 
+    public FootballCoach() {
+        System.out.println(" > inside Constructor FootballCoach()");
+    }
+
+    //    @Autowired
+//    public void setFortuneService(FortuneService fortuneService) {
+//        this.fortuneService = fortuneService;
+//    }
+
     @Autowired
-    public void setFortuneService(FortuneService fortuneService) {
+    public void doSomeMethodStuff(FortuneService fortuneService) {
+        System.out.println(" > inside method doSomeMethodStuff()");
         this.fortuneService = fortuneService;
     }
 
