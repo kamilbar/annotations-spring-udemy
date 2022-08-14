@@ -2,6 +2,7 @@ package com.luv2code.springdemo;
 
 import com.luv2code.springdemo.service.FortuneService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 //@Component("MySillyCoach")
@@ -11,7 +12,7 @@ public class TennisCoach implements Coach {
     private FortuneService fortuneService;
 
     @Autowired
-    public TennisCoach(FortuneService fortuneService) {
+    public TennisCoach(@Qualifier("happyFortuneService") FortuneService fortuneService) {
         this.fortuneService = fortuneService;
     }
 
