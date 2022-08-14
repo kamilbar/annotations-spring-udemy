@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class FootballCoach implements Coach {
 
+    @Autowired
     private FortuneService fortuneService;
 
     public FootballCoach() {
@@ -18,11 +19,11 @@ public class FootballCoach implements Coach {
 //        this.fortuneService = fortuneService;
 //    }
 
-    @Autowired
-    public void doSomeMethodStuff(FortuneService fortuneService) {
-        System.out.println(" > inside method doSomeMethodStuff()");
-        this.fortuneService = fortuneService;
-    }
+//    @Autowired
+//    public void doSomeMethodStuff(FortuneService fortuneService) {
+//        System.out.println(" > inside method doSomeMethodStuff()");
+//        this.fortuneService = fortuneService;
+//    }
 
     @Override
     public String getDailyWorkout() {
